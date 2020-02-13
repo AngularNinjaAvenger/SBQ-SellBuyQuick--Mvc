@@ -1,3 +1,4 @@
+const MONGO_URI = require("./database-uri");
 const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
 
@@ -5,7 +6,7 @@ let _db;
 
 const mongoConnect = callback => {
   MongoClient.connect(
-    "mongodb://localhost:27017/shop",
+    MONGO_URI,
     { useNewUrlParser: true }
   )
     .then(client => {
