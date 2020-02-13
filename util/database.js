@@ -5,7 +5,7 @@ let _db;
 
 const mongoConnect = callback => {
   MongoClient.connect(
-    "mongodb+srv://metamemelord:hehehasdele@dashboard-db-wvq8d.azure.mongodb.net/node-course",
+    "mongodb://localhost:27017/shop",
     { useNewUrlParser: true }
   )
     .then(client => {
